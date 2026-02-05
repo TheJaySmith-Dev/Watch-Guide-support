@@ -16,8 +16,8 @@ const Home: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-             <Link to="/getting-started" className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
-               Get Started
+             <Link to="/features" className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
+               Explore Features
              </Link>
              <Link to="/contact" className="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-700 font-semibold rounded-lg border border-slate-200 hover:bg-slate-50 transition-all">
                Contact Support
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
             {[
               { label: 'Find where to watch', icon: Search, to: '/how-to' },
               { label: 'View trailers', icon: PlayCircle, to: '/features' },
-              { label: 'Save to my list', icon: ListPlus, to: '/getting-started' },
+              { label: 'Save to my list', icon: ListPlus, to: '/features' },
               { label: 'Fix a problem', icon: HelpCircle, to: '/troubleshooting' },
             ].map((item) => (
               <Link key={item.label} to={item.to} className="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors group text-center h-full">

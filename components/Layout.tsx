@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink as RouterNavLink, useLocation, Outlet, Link } from 'react-router-dom';
-import { Menu, X, Search, Clapperboard, ChevronRight } from 'lucide-react';
+import { Menu, X, Clapperboard, ChevronRight } from 'lucide-react';
 import { NAV_LINKS, FOOTER_LINKS } from '../constants';
-import SearchModal from './SearchModal';
 
 const Layout: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
   // Breadcrumbs generation
@@ -18,7 +16,6 @@ const Layout: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans text-slate-900">
-      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
       {/* Header */}
       <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
@@ -51,16 +48,6 @@ const Layout: React.FC = () => {
 
           {/* Actions */}
           <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="flex items-center space-x-2 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-md text-slate-500 transition-colors"
-            >
-              <Search className="w-4 h-4" />
-              <span className="text-sm hidden sm:inline">Search...</span>
-              <kbd className="hidden lg:inline-block pointer-events-none h-5 select-none items-center gap-1 rounded border border-slate-300 bg-slate-50 px-1.5 font-mono text-[10px] font-medium text-slate-500 opacity-100">
-                <span className="text-xs">⌘</span>K
-              </kbd>
-            </button>
             <button
               className="md:hidden p-2 text-slate-600"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

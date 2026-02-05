@@ -15,7 +15,6 @@ export const APP_VERSION = "1.2.0";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", path: "/" },
-  { label: "Getting Started", path: "/getting-started" },
   { label: "Features", path: "/features" },
   { label: "How-To", path: "/how-to" },
   { label: "Troubleshooting", path: "/troubleshooting" },
@@ -29,43 +28,6 @@ export const FOOTER_LINKS: NavLink[] = [
 ];
 
 export const DOCS_DATA: Record<string, DocCategory> = {
-  "getting-started": {
-    id: "getting-started",
-    title: "Getting Started",
-    description: "Everything you need to set up WatchGuide and start discovering.",
-    type: "article",
-    items: [
-      {
-        id: "first-setup",
-        title: "First-Time Setup",
-        content: [
-          "Welcome to WatchGuide! When you first launch the app, you'll be prompted to grant permissions for network access (required for fetching data) and notifications (optional, for release alerts).",
-          "You will also be asked to select your primary region. This is crucial for accurate 'Where to Watch' providers.",
-        ],
-        steps: [
-          "Open WatchGuide on your iOS device.",
-          "Allow Network Access when prompted.",
-          "Select your country from the region list.",
-          "Tap 'Start Watching' to enter the main dashboard."
-        ]
-      },
-      {
-        id: "tour-detail",
-        title: "Media Detail Tour",
-        content: [
-          "The Media Detail screen is the heart of WatchGuide. At the top, you'll see a high-resolution hero image. Tap the 'Play' button to instantly watch the trailer inline.",
-          "Scroll down to see ratings from TMDb and OMDb, cast & crew lists, and for TV shows, the Seasons section."
-        ],
-        image: "https://i.ibb.co/Q3Gy7gBq/i-Phone-App-Store-Preview-Home.png"
-      },
-      {
-        id: "add-list",
-        title: "Managing Your List",
-        content: "Tap the bookmark icon on any movie or show card to add it to your Watchlist. You can access your saved items from the 'My List' tab in the bottom navigation bar.",
-        image: "https://i.ibb.co/tpwm0ZXQ/i-Phone-App-Store-Preview-Lists.png"
-      }
-    ]
-  },
   "features": {
     id: "features",
     title: "Features Deep Dive",
@@ -99,6 +61,13 @@ export const DOCS_DATA: Record<string, DocCategory> = {
         description: "Comprehensive guides for TV shows.",
         icon: List,
         content: "Browse by season. Tap a season card to view a detailed episode list, complete with air dates, runtimes, and individual episode ratings."
+      },
+      {
+        id: "lists",
+        title: "Lists & Tracking",
+        description: "Save items for later.",
+        icon: List,
+        content: "Tap the bookmark icon on any movie or show card to add it to your Watchlist. You can access your saved items from the 'My List' tab in the bottom navigation bar."
       }
     ]
   },
